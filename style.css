@@ -61,6 +61,7 @@ body{
     /* text-align: center; */
     margin: auto;
 }
+
 @media (max-width: 480px) {
     
     .btn {
@@ -89,6 +90,4 @@ body{
     .second-row{
         display: flex;
     }
-    
-   
 }
