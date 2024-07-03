@@ -48,7 +48,14 @@ body{
     font-size: 20px;
 }
 .startbtn{
-    display: none;
+    display: inline-block;
+        /* position: absolute; */
+        /* top: 370px; */
+        /* left: 120px; */
+    padding: 7px;
+    border-radius: 15px;
+    border: 2px solid ;
+    margin: 20px;
 }
 .extra{
     /* text-align: center; */
@@ -82,18 +89,6 @@ body{
     .second-row{
         display: flex;
     }
-    .high{
-        /* left: 100px; */
-        top: 415px;
-    }
-    .startbtn{
-        display: inline-block;
-        /* position: absolute; */
-        /* top: 370px; */
-        /* left: 120px; */
-        padding: 7px;
-        border-radius: 15px;
-        border: 2px solid ;
-        margin: 20px;
-    }
+    
+   
 }

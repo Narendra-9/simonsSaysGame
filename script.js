@@ -61,7 +61,7 @@ function checkans(idx){
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor="antiquewhite";
         },250)
-        startbtn.style.display="block"
+        startbtn.style.display="inline-block"
         if(level>highestScore){
             highestScore=level;
             document.querySelector(".high").innerHTML=`High Score : ${level}`;
