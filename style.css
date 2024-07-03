@@ -47,8 +47,9 @@ body{
     top: 5px;
     font-size: 20px;
 }
-
-
+.startbtn{
+    display: none;
+}
 @media (max-width: 480px) {
     
     .btn {
@@ -69,7 +70,7 @@ body{
     .btn-container {
         /* flex-direction: column; */
         margin: auto;
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .first-row {
         display: flex;
@@ -79,6 +80,15 @@ body{
     }
     .high{
         left: 100px;
-        top: 400px;
+        top: 415px;
+    }
+    .startbtn{
+        display: block;
+        position: absolute;
+        top: 370px;
+        left: 120px;
+        padding: 7px;
+        border-radius: 15px;
+        border: 2px solid ;
     }
 }

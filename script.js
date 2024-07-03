@@ -6,17 +6,20 @@ let btns=["yellow","red","green","purple"];
 let started=false;
 let level=0;
 let highestScore=0;
+let startbtn=document.querySelector(".startbtn")
 
+startbtn.onclick=startGame
 
-document.addEventListener("keypress",function(){
+function startGame(){
     if (!started){
-        console.log("game Started");
         started=true;
-        document.querySelector("body").style.backgroundColor="white";
         levelUp();
+        startbtn.style.display="None";
     }
  
-});
+}
+
+document.addEventListener("keypress",startGame);
 
 function gameFlash(btn){
     btn.classList.add("flash");
@@ -41,7 +44,6 @@ function levelUp(){
     let randcolor=btns[randinx]
     gameSeq.push(randcolor);
     let randbtn=document.querySelector(`.${randcolor}`)
-    console.log(gameSeq)
     gameFlash(randbtn)
 
 }
@@ -57,8 +59,9 @@ function checkans(idx){
         document.querySelector("body").style.backgroundColor="red";
         document.querySelector("#error").play();
         setTimeout(function(){
-            document.querySelector("body").style.backgroundColor="white";
+            document.querySelector("body").style.backgroundColor="antiquewhite";
         },250)
+        startbtn.style.display="block"
         if(level>highestScore){
             highestScore=level;
             document.querySelector(".high").innerHTML=`High Score : ${level}`;
@@ -69,12 +72,12 @@ function checkans(idx){
 }
 
 function btnpress(){
-    console.log(this)
+
     let btn=this;
     userFlash(btn);
     let usercolor=btn.getAttribute("id")
     userSeq.push(usercolor)
-    console.log(userSeq);
+
     checkans(userSeq.length-1)
 }
 let allbtns=document.querySelectorAll(".btn");
