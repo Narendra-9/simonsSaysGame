@@ -65,7 +65,7 @@ function checkans(idx){
         if(level>highestScore){
             highestScore=level;
             document.querySelector(".high").innerHTML=`High Score : ${level}`;
-            setTimeout(function(){alert(`Congratulations !! New High Score : ${level}`)},1000);
+            setTimeout(function(){alert(`Congratulations !! New High Score : ${highestScore}`)},1000);
         }
         reset();
     }
